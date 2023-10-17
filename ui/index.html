@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>varktygh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="options" style="display: block; width: 300px;">
+        <div class="tab">
+            <button id="optionsHide" class="options" onclick="hide(event)">◄</button>
+            <button id="changelogTab" class="options">Changelog</button>
+            <button id="aboutTab" class="options active">About</button>
+        </div>
+        
+        <div id="aboutContent" class="tabcontent" style="display: block;">
+            <p>
+                <a href="https://github.com/tavro/sprogh" target="_blank">Sprogh</a> is a free open source tool by tavro.
+            </p>
+            <p>
+                The project is under active development. Creator and maintainer: <a href="https://github.com/tavro" target="_blank">tavro</a>. For older
+                versions see the changelog.
+                Please report bugs by contacting me directly via <a href="mailto:isakhorvath@gmail.com" target="_blank">email</a>.
+            </p>
+            <div style="text-align: left">
+                <p>Check out my other projects:</p>
+                <div> • <a href="#" target="_blank">Blank</a>: this is a project description</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

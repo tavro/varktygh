@@ -1,0 +1,64 @@
+:root {
+    --header: rgb(146, 110, 127);
+    --bg-main: rgba(153, 119, 135, 0.95);
+    --bg-light: rgba(164, 139, 151, 0.95);
+    --dark-solid: rgb(97, 73, 84);
+  
+    --monospace: Consolas, monospace;
+    --serif: Georgia, serif;
+    --sans-serif: Helvetica, Arial, sans-serif;
+}
+
+#options {
+    display: block; 
+    width: 300px;
+    position: absolute;
+    font-family: var(--monospace);
+    border: solid 1px var(--dark-solid);
+    margin: 10px;
+    padding-bottom: 0.3em;
+    background: var(--bg-light);
+    font-size: 10px;
+}
+
+.tab {
+    border-bottom: 1px solid var(--dark-solid);
+    height: 2.2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+button.options {
+    width: 100%;
+    background-color: var(--bg-main);
+    font-weight: bold;
+    border: none;
+    transition: 0.2s;
+}
+
+button#optionsHide {
+    width: auto;
+    font-family: var(--sans-serif);
+    padding: 0.6em 0.45em;
+}
+
+button.active {
+    background-color: var(--header);
+    color: white;
+}
+
+#aboutContent {
+    text-align: justify;
+}
+
+.tabcontent {
+    display: none;
+    padding: 0 12px 2px 12px;
+    opacity: 0.9;
+}
+
+#aboutContent a {
+    color: #1d1b1c;
+    font-weight: bold;
+    text-decoration: underline;
+}
