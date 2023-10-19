@@ -42,12 +42,6 @@ button.options:hover {
     color: white;
 }
 
-button#optionsHide {
-    width: auto;
-    font-family: var(--sans-serif);
-    padding: 0.6em 0.45em;
-}
-
 button.active {
     background-color: var(--header);
     color: white;
@@ -60,7 +54,7 @@ button.active {
     text-align: justify;
 }
 
-#aboutContent a {
+.tabcontent a {
     color: #1d1b1c;
     font-weight: bold;
     text-decoration: underline;
