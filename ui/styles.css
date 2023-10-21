@@ -28,6 +28,7 @@
     padding: 0.4em 1em;
     display: flex;
     cursor: move;
+    user-select: none;
 }
 
 .options-header h1 {
