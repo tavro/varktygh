@@ -1,2 +1,3 @@
 # varktygh
-a repository for javascript utilities
+
+A window based UI library.
