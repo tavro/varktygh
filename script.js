@@ -19,11 +19,6 @@ const colors = {
 
 addCSSVariables(colors);
 
-const changelogTab = document.getElementById("changelogTab");
-const aboutTab = document.getElementById("aboutTab");
-const changelogContent = document.getElementById("changelogContent");
-const aboutContent = document.getElementById("aboutContent");
-
 const collapseButton = document.getElementById("collapseButton");
 collapseButton.addEventListener("click", function() {
     const collapsable = document.getElementById("collapsable");
@@ -31,21 +26,32 @@ collapseButton.addEventListener("click", function() {
     collapseButton.innerHTML = collapseButton.innerHTML === "_" ? "■" : "_";
 });
 
-changelogTab.addEventListener("click", function() {
-    aboutContent.style.display = "none";
-    changelogContent.style.display = "block";
+const idPrefixes = ["changelog", "about", "config"]
 
-    aboutTab.classList.remove("active");
-    changelogTab.classList.add("active");
-});
+function showTab(tab, content) {
+    for(let i = 0; i < idPrefixes.length; i++) {
+        const tabId = idPrefixes[i] + "Tab";
+        const tabElement = document.getElementById(tabId);
+        const contentId = idPrefixes[i] + "Content";
+        const contentElement = document.getElementById(contentId);
 
-aboutTab.addEventListener("click", function() {
-    changelogContent.style.display = "none";
-    aboutContent.style.display = "block";
+        contentElement.style.display = "none";
+        tabElement.classList.remove("active");
+    }
 
-    changelogTab.classList.remove("active");
-    aboutTab.classList.add("active");
-});
+    content.style.display = "block";
+    tab.classList.add("active");
+}
+
+for(let i = 0; i < idPrefixes.length; i++) {
+    const tabId = idPrefixes[i] + "Tab";
+    const tabElement = document.getElementById(tabId);
+    const contentId = idPrefixes[i] + "Content";
+    const contentElement = document.getElementById(contentId);
+    tabElement.addEventListener("click", function() {
+        showTab(tabElement, contentElement);
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     var optionsHeader = document.querySelector('.options-header');
