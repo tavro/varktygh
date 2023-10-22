@@ -79,3 +79,36 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = false;
     });
 });
+
+const colorKeys = ["dark-solid", "header", "header-hover", "bg-main", "bg-light"];
+for(let i = 1; i < 5+1; i++) {
+    const redId = 'red-slider' + i;
+    const greenId = 'green-slider' + i;
+    const blueId = 'blue-slider' + i;
+    const redVId = 'red-value' + i;
+    const greenVId = 'green-value' + i;
+    const blueVId = 'blue-value' + i;
+    const redSlider = document.getElementById(redId);
+    const greenSlider = document.getElementById(greenId);
+    const blueSlider = document.getElementById(blueId);
+    const redValue = document.getElementById(redVId);
+    const greenValue = document.getElementById(greenVId);
+    const blueValue = document.getElementById(blueVId);
+
+    function updateColor() {
+        const red = redSlider.value;
+        const green = greenSlider.value;
+        const blue = blueSlider.value;
+    
+        redValue.textContent = red;
+        greenValue.textContent = green;
+        blueValue.textContent = blue;
+    
+        colors[colorKeys[i-1]] = `rgb(${red}, ${green}, ${blue})`;
+        addCSSVariables(colors);
+    }
+
+    redSlider.addEventListener('input', updateColor);
+    greenSlider.addEventListener('input', updateColor);
+    blueSlider.addEventListener('input', updateColor);
+}

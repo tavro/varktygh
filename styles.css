@@ -13,6 +13,8 @@
 #options {
     display: block; 
     width: 300px;
+    max-height: 600px;
+    overflow-y: scroll;
     position: absolute;
     font-family: var(--monospace);
     border: solid 1px var(--dark-solid);
@@ -88,4 +90,40 @@ button.active {
     color: #1d1b1c;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.color-preview {
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+}
+
+#cp-header {
+    background-color: var(--header);
+}
+
+#cp-headerhover {
+    background-color: var(--header-hover);
+}
+
+#cp-bgmain {
+    background-color: var(--bg-main);
+}
+
+#cp-bglight {
+    background-color: var(--bg-light);
+}
+
+#cp-darksolid {
+    background-color: var(--dark-solid);
+}
+
+.slider {
+    width: 80%;
+    margin: 8px auto;
+}
+
+.slider label {
+    width: 120px;
+    display: inline-block;
 }
